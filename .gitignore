@@ -216,3 +216,36 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# sol-data-nexus additions
+# ============================================================
+
+# Spark / JVM big-data noise
+spark-warehouse/
+derby.log
+metastore_db/
+
+# MinIO local data (when bind-mounted instead of using a named volume)
+infra/data/
+data/minio/
+
+# kind / k8s generated artifacts
+.kind-config-*
+infra/k8s/kubeconfig
+infra/k8s/.tmp/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local-only env files (in addition to .env above)
+.env.local
+.env.*.local
